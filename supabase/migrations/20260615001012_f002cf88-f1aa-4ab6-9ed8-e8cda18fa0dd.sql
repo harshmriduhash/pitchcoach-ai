@@ -1,0 +1,1 @@
+CREATE POLICY "Persona secrets are backend only" ON public.persona_secrets FOR ALL TO anon, authenticated USING (false) WITH CHECK (false);
