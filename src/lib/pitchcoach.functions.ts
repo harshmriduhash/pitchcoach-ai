@@ -39,10 +39,12 @@ export const continuePractice = createServerFn({ method: "POST" })
     if (!session) throw new Error("Practice session not found.");
     const { data: turns } = await context.supabase.from("call_turns").select("speaker,text,turn_order").eq("session_id", data.sessionId).order("turn_order").limit(30);
     const persona = session.personas;
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: secret } = await supabaseAdmin.from("persona_secrets").select("system_prompt").eq("persona_id", session.persona_id).single();
     const history = (turns ?? []).map((turn) => `${turn.speaker === "user" ? "REP" : "PROSPECT"}: ${turn.text}`).join("\n");
     const { text } = await generateText({
       model: (await gateway()).chatModel("google/gemini-3-flash-preview"),
-      system: `You are ${persona?.name ?? "a difficult prospect"}. ${persona?.system_prompt ?? "Push back realistically."} Never break character. Raise objections naturally. Keep replies to 1-3 spoken sentences. If the rep rambles, interrupt. Do not coach them during the call.`,
+      system: `You are ${persona?.name ?? "a difficult prospect"}. ${secret?.system_prompt ?? "Push back realistically."} Never break character. Raise objections naturally. Keep replies to 1-3 spoken sentences. If the rep rambles, interrupt. Do not coach them during the call.`,
       prompt: `CALL SO FAR:\n${history}\nREP: ${data.message}\nRespond only as the prospect.`,
     });
     const nextOrder = (turns?.length ?? 0) + 1;
