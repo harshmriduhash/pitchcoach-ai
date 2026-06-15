@@ -1,0 +1,8 @@
+import { LockKeyhole, Skull } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import type { Tables } from "@/integrations/supabase/types";
+import { Button } from "./ui/button";
+
+export function PersonaCard({ persona, locked = false }: { persona: Tables<"personas">; locked?: boolean }) {
+  return <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card p-5 transition hover:-translate-y-1 hover:border-primary/60"><div className="mb-5 flex items-start justify-between"><div className="grid size-14 place-items-center rounded-full border border-primary/30 bg-primary/10 font-display text-2xl font-black text-primary">{persona.name.replace("The ", "").slice(0,2).toUpperCase()}</div>{locked ? <span className="flex items-center gap-1 rounded-full bg-muted px-2 py-1 text-[10px] font-bold uppercase text-muted-foreground"><LockKeyhole className="size-3" /> Pro</span> : <span className="text-xs text-primary">{Array.from({length: persona.difficulty}).map((_,i) => <Skull key={i} className="ml-0.5 inline size-3" />)}</span>}</div><h3 className="text-2xl font-bold text-foreground">{persona.name}</h3><p className="mt-2 flex-1 text-sm leading-6 text-muted-foreground">{persona.description}</p><Button asChild variant={locked ? "tactical" : "default"} className="mt-5 w-full"><Link to="/practice" search={{ persona: persona.slug }}>{locked ? "Preview challenge" : "Practice now"}</Link></Button></article>;
+}
