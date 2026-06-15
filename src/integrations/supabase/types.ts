@@ -171,6 +171,38 @@ export type Database = {
           },
         ]
       }
+      persona_secrets: {
+        Row: {
+          created_at: string
+          objection_patterns: string[]
+          persona_id: string
+          system_prompt: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          objection_patterns?: string[]
+          persona_id: string
+          system_prompt: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          objection_patterns?: string[]
+          persona_id?: string
+          system_prompt?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "persona_secrets_persona_id_fkey"
+            columns: ["persona_id"]
+            isOneToOne: true
+            referencedRelation: "personas"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       personas: {
         Row: {
           accent: string
@@ -183,11 +215,9 @@ export type Database = {
           is_custom: boolean
           is_free: boolean
           name: string
-          objection_patterns: string[]
           opening_line: string
           persona_type: string
           slug: string
-          system_prompt: string
           updated_at: string
         }
         Insert: {
@@ -201,11 +231,9 @@ export type Database = {
           is_custom?: boolean
           is_free?: boolean
           name: string
-          objection_patterns?: string[]
           opening_line: string
           persona_type: string
           slug: string
-          system_prompt: string
           updated_at?: string
         }
         Update: {
@@ -219,11 +247,9 @@ export type Database = {
           is_custom?: boolean
           is_free?: boolean
           name?: string
-          objection_patterns?: string[]
           opening_line?: string
           persona_type?: string
           slug?: string
-          system_prompt?: string
           updated_at?: string
         }
         Relationships: []
