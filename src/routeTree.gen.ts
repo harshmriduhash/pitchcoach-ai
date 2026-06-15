@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PracticeRouteImport } from './routes/practice'
+import { Route as PersonasRouteImport } from './routes/personas'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as LeaderboardRouteImport } from './routes/leaderboard'
 import { Route as DashboardRouteImport } from './routes/dashboard'
@@ -20,6 +21,11 @@ import { Route as ReportSessionIdRouteImport } from './routes/report.$sessionId'
 const PracticeRoute = PracticeRouteImport.update({
   id: '/practice',
   path: '/practice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PersonasRoute = PersonasRouteImport.update({
+  id: '/personas',
+  path: '/personas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OnboardingRoute = OnboardingRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRoute
   '/leaderboard': typeof LeaderboardRoute
   '/onboarding': typeof OnboardingRoute
+  '/personas': typeof PersonasRoute
   '/practice': typeof PracticeRoute
   '/report/$sessionId': typeof ReportSessionIdRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardRoute
   '/leaderboard': typeof LeaderboardRoute
   '/onboarding': typeof OnboardingRoute
+  '/personas': typeof PersonasRoute
   '/practice': typeof PracticeRoute
   '/report/$sessionId': typeof ReportSessionIdRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRoute
   '/leaderboard': typeof LeaderboardRoute
   '/onboarding': typeof OnboardingRoute
+  '/personas': typeof PersonasRoute
   '/practice': typeof PracticeRoute
   '/report/$sessionId': typeof ReportSessionIdRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/leaderboard'
     | '/onboarding'
+    | '/personas'
     | '/practice'
     | '/report/$sessionId'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/leaderboard'
     | '/onboarding'
+    | '/personas'
     | '/practice'
     | '/report/$sessionId'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/leaderboard'
     | '/onboarding'
+    | '/personas'
     | '/practice'
     | '/report/$sessionId'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRoute
   LeaderboardRoute: typeof LeaderboardRoute
   OnboardingRoute: typeof OnboardingRoute
+  PersonasRoute: typeof PersonasRoute
   PracticeRoute: typeof PracticeRoute
   ReportSessionIdRoute: typeof ReportSessionIdRoute
 }
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/practice'
       fullPath: '/practice'
       preLoaderRoute: typeof PracticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personas': {
+      id: '/personas'
+      path: '/personas'
+      fullPath: '/personas'
+      preLoaderRoute: typeof PersonasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/onboarding': {
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRoute,
   LeaderboardRoute: LeaderboardRoute,
   OnboardingRoute: OnboardingRoute,
+  PersonasRoute: PersonasRoute,
   PracticeRoute: PracticeRoute,
   ReportSessionIdRoute: ReportSessionIdRoute,
 }

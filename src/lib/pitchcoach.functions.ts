@@ -2,7 +2,6 @@ import { generateText, Output } from "ai";
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
-import { createAiGateway } from "./ai-gateway.server";
 
 const turnSchema = z.object({
   sessionId: z.string().uuid(),
@@ -25,9 +24,10 @@ const reportSchema = z.object({
   action_items: z.array(z.string()).length(3),
 });
 
-function gateway() {
+async function gateway() {
   const key = process.env.LOVABLE_API_KEY;
   if (!key) throw new Error("AI coaching is temporarily unavailable.");
+  const { createAiGateway } = await import("./ai-gateway.server");
   return createAiGateway(key);
 }
 
@@ -41,7 +41,7 @@ export const continuePractice = createServerFn({ method: "POST" })
     const persona = session.personas;
     const history = (turns ?? []).map((turn) => `${turn.speaker === "user" ? "REP" : "PROSPECT"}: ${turn.text}`).join("\n");
     const { text } = await generateText({
-      model: gateway().chatModel("google/gemini-3-flash-preview"),
+      model: (await gateway()).chatModel("google/gemini-3-flash-preview"),
       system: `You are ${persona?.name ?? "a difficult prospect"}. ${persona?.system_prompt ?? "Push back realistically."} Never break character. Raise objections naturally. Keep replies to 1-3 spoken sentences. If the rep rambles, interrupt. Do not coach them during the call.`,
       prompt: `CALL SO FAR:\n${history}\nREP: ${data.message}\nRespond only as the prospect.`,
     });
@@ -64,7 +64,7 @@ export const scorePractice = createServerFn({ method: "POST" })
     if (!session || !turns?.length) throw new Error("Complete at least one exchange before ending.");
     const transcript = turns.map((t) => `${t.speaker.toUpperCase()}: ${t.text}`).join("\n");
     const { output } = await generateText({
-      model: gateway().chatModel("google/gemini-3-flash-preview"),
+      model: (await gateway()).chatModel("google/gemini-3-flash-preview"),
       output: Output.object({ schema: reportSchema }),
       system: "You are a direct, world-class sales coach. Score consistently and give specific, useful feedback grounded only in the transcript.",
       prompt: `Persona: ${session.personas?.name ?? "Prospect"}\nCall type: ${session.call_type}\nTranscript:\n${transcript}`,
