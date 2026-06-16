@@ -8,7 +8,7 @@ export async function logError(source: string, message: string, context?: Record
       source: source.slice(0, 199),
       message: message.slice(0, 3999),
       severity: "error",
-      context: context ?? null,
+      context: (context ?? null) as never,
     });
   } catch {
     // swallow — monitoring must never break the app
