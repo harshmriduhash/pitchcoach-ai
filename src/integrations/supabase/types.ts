@@ -171,6 +171,39 @@ export type Database = {
           },
         ]
       }
+      error_logs: {
+        Row: {
+          context: Json | null
+          created_at: string
+          id: string
+          message: string
+          resolved: boolean
+          severity: string
+          source: string
+          user_id: string | null
+        }
+        Insert: {
+          context?: Json | null
+          created_at?: string
+          id?: string
+          message: string
+          resolved?: boolean
+          severity?: string
+          source: string
+          user_id?: string | null
+        }
+        Update: {
+          context?: Json | null
+          created_at?: string
+          id?: string
+          message?: string
+          resolved?: boolean
+          severity?: string
+          source?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       persona_secrets: {
         Row: {
           created_at: string
@@ -302,6 +335,27 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_stats: {
         Row: {
           avg_score_overall: number
@@ -352,9 +406,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
+      app_role: "admin" | "user"
       call_status:
         | "pending"
         | "active"
@@ -492,6 +553,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
+      app_role: ["admin", "user"],
       call_status: [
         "pending",
         "active",
