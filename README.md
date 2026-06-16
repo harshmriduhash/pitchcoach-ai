@@ -1,153 +1,260 @@
-# PitchCoach AI
+<div align="center">
 
-> Practice cold calls until you stop losing deals.
+# 🎯 PitchCoach AI
 
-PitchCoach AI is a voice-ready, AI-native sales practice platform for SDRs, account executives, and founders. It creates the pressure of a real buyer conversation before revenue, reputation, or a fundraise is at risk.
+### **The flight simulator for sales conversations.**
 
-## The problem
+*Practice the call that matters — before it costs you the deal.*
 
-Sales professionals make dozens of calls each day but rarely get a structured feedback loop. Traditional training is passive, manager role-play is difficult to schedule, and enterprise call-intelligence products analyze mistakes only after they have happened. Founders face the same problem when learning to pitch investors with actual capital on the line.
+[![Built on Lovable](https://img.shields.io/badge/built%20on-Lovable%20Cloud-FFC83C?style=for-the-badge)](https://lovable.dev)
+[![Stack](https://img.shields.io/badge/stack-TanStack%20Start%20%2B%20React%2019-0EA5E9?style=for-the-badge)](https://tanstack.com/start)
+[![AI](https://img.shields.io/badge/AI-Gemini%203%20Flash-8B5CF6?style=for-the-badge)](https://lovable.dev)
+[![License](https://img.shields.io/badge/license-Proprietary-111?style=for-the-badge)]()
 
-PitchCoach moves learning **before the call**. A user picks one of ten psychologically distinct buyers, practices a realistic conversation, and receives an eight-dimension debrief with specific drills.
+---
 
-## How it solves it
+**🎤 Voice-in / voice-out** · **🧠 10 buyer personas with attitude** · **📊 8-dimension scorecard** · **📄 PDF debrief export** · **🛡️ Admin monitoring console**
 
-- **Real resistance:** personas interrupt, object, become interested, or end weak conversations.
-- **Deliberate practice:** repeatable scenarios isolate specific skills without risking a live opportunity.
-- **Immediate diagnosis:** every session is scored for opening, talk ratio, objection handling, filler words, value framing, discovery, next step, and confidence.
-- **Actionable coaching:** Lovable AI returns one strength, one critical weakness, and three next drills.
-- **Persistent progress:** call history, reports, streaks, and an opt-in leaderboard make improvement visible.
+</div>
 
-## Does it save time and money?
+---
 
-Yes. The product removes scheduling from practice and turns a manager-led 30–60 minute role-play into an on-demand 10-minute drill. A rep can practice before the workday, review feedback immediately, and repeat the exact failure mode.
+## 🔥 The 30-second pitch
 
-The free tier replaces ad-hoc peer practice. Pro is priced at **$24.99/month**, far below enterprise conversation-intelligence contracts or a single hour of external sales coaching. The larger economic gain is avoided loss: improving one weak opener or objection response before a real call can preserve an opportunity worth thousands of dollars. PitchCoach does not promise revenue outcomes; it lowers the cost, time, and risk of building the behaviors that drive them.
+> Sales reps make 40+ calls a day and almost never get coached on a single one. Investor pitches blow up live, in front of the only people who could have written the check. **PitchCoach AI is where you fail safely.**
+>
+> Pick a buyer persona, take a call, get a 100-point scorecard and the next three drills — in under ten minutes. No scheduling, no managers, no awkward roleplay with a coworker who'd rather be selling.
+>
+> If you've ever wished there was a "save state" for real conversations, this is it.
 
-## Product surfaces
+---
 
-| Surface | Purpose |
+## ❓ What problem does it actually solve?
+
+| Reality today | What PitchCoach does |
 |---|---|
-| Landing | Positioning, personas, workflow, pricing |
-| Authentication | Email/password and managed Google login |
-| Onboarding | Role, product, ideal customer, deal size, first drill |
-| Dashboard | Practice entry point, scorecard, recent sessions |
-| Personas | Ten seeded buyers with tier-aware availability |
-| Practice room | Stateful, multi-turn AI role-play with live counters |
-| Debrief | Eight scores, transcript-derived feedback, next drills |
-| History & analytics | Persistent session record and performance model |
-| Leaderboard | Privacy-aware practice ranking |
-| Settings | Pitch context and leaderboard consent |
+| Reps practice on **real prospects** and lose deals to learn. | They lose them to an **AI buyer** that doesn't have a budget anyway. |
+| Manager roleplay = scheduling, ego, inconsistent rubric. | On-demand drills with the **same 8-dimension rubric every time**. |
+| Call-recording tools tell you what went wrong **yesterday**. | We tell you **before the call**, so it doesn't go wrong at all. |
+| Founders rehearse pitches in the mirror. | They get interrupted by a **Series A CFO** who's heard 200 pitches this year. |
+| "Sales training" = a slide deck once a quarter. | Deliberate practice, **measured every rep**, like the gym. |
 
-## Architecture
+---
+
+## 💸 Does it save time and money?
+
+**Yes — measurably, in three places.**
+
+1. **Time.** A traditional manager roleplay is a 30–60 minute calendar negotiation. A PitchCoach drill is **10 minutes, on demand, at 6am if you want it**. A rep can complete a full practice + scored debrief in the time it would take to schedule the old kind.
+2. **Money — direct.** Pro is **$24.99/month**. The going rate for a one-hour external sales coach is **$200–$500**. Enterprise conversation-intelligence platforms start at **$1,000+/seat/year** and only tell you what already happened.
+3. **Money — avoided loss.** One fixed opener or one cleanly handled "your competitor is cheaper" objection on a real call can save a deal worth **thousands**. We don't promise revenue; we lower the cost, time, and risk of building the behaviors that produce it.
+
+**Honest math for a 20-rep team:** replacing two hours of manager roleplay per rep per month with PitchCoach Pro returns ~$960 in saved manager time at a fully-loaded $24/hr — at a software cost of **$500**. The avoided-loss upside is uncapped.
+
+---
+
+## 👀 What you can actually do in the app today
+
+| Surface | What happens |
+|---|---|
+| **Landing** | Positioning, personas, pricing, public leaderboard preview. |
+| **Auth** | Email/password and managed Google sign-in. Breach-screened passwords. |
+| **Onboarding** | Capture role, product, ICP, deal size — feeds every future drill. |
+| **Dashboard** | Streak, average score, personal best, recent calls. |
+| **Personas** | Ten psychologically distinct buyers (Gatekeeper, Price Objector, Series A CFO, Competitor Loyalist, and friends). |
+| **🎤 Live Practice** | Real-time **voice in (Web Speech) + voice out (TTS)**, with typing fallback. Live counters for filler words, objections, turns. |
+| **Debrief** | 8 scores, transcript-grounded coaching, three concrete next drills. **One-click PDF export.** |
+| **History & analytics** | Every call persisted. Trends over time. |
+| **Leaderboard** | Opt-in only. Privacy-aware. |
+| **🛡️ Admin Console** | User counts, call volume, completion rate, average score, **live error feed with resolve-tracking**. Role-gated. |
+
+---
+
+## 🏗️ Architecture — at a glance
 
 ```mermaid
 flowchart LR
-  U[Browser / React 19] --> R[TanStack Start routes]
-  R --> A[Lovable Cloud Auth]
-  R --> F[Authenticated server functions]
-  R --> D[(PostgreSQL + row security)]
-  F --> G[Lovable AI Gateway]
-  F --> D
-  G --> M[Gemini 3 Flash]
-  D --> P[Profiles and personas]
-  D --> C[Sessions and turns]
-  D --> S[Scores and leaderboard]
+  subgraph Client["🌐 Browser (React 19)"]
+    UI[TanStack Start routes]
+    MIC[🎤 Web Speech API<br/>STT + TTS]
+    PDF[📄 jsPDF export]
+  end
+  subgraph Edge["⚡ Edge runtime"]
+    SF[Authenticated<br/>Server functions]
+    RT[Public API routes]
+  end
+  subgraph Cloud["☁️ Lovable Cloud"]
+    AUTH[Auth + sessions]
+    DB[(PostgreSQL<br/>+ Row-Level Security)]
+    LOGS[(error_logs)]
+  end
+  subgraph AI["🧠 Lovable AI Gateway"]
+    M[Gemini 3 Flash]
+  end
+
+  UI <--> MIC
+  UI --> PDF
+  UI --> AUTH
+  UI --> SF
+  SF --> DB
+  SF --> M
+  UI -. errors .-> LOGS
+  LOGS --> SF
 ```
 
-The application is a modular monolith: one deployable web application with explicit browser, server-function, AI, and data boundaries. This is intentionally simpler and safer than the seven-microservice draft in the PRD for an MVP. It avoids operational overhead while preserving seams that can be extracted when traffic or team ownership justifies it.
+It's a **modular monolith** — one deployable app, with hard boundaries between browser, server functions, AI, and data. Simpler than seven microservices, safer than putting business logic in the browser.
 
-## Call and scoring sequence
+---
+
+## 🎬 The live call loop
 
 ```mermaid
 sequenceDiagram
-  participant U as User
-  participant W as Web app
-  participant DB as Lovable Cloud DB
-  participant AI as Lovable AI
-  U->>W: Select persona and start
-  W->>DB: Create owned session
+  autonumber
+  participant U as 🎤 Rep
+  participant B as Browser
+  participant SF as Server Function
+  participant DB as Database
+  participant AI as Gemini 3 Flash
+
+  U->>B: Tap "Start practice call"
+  B->>DB: Create session (RLS-scoped)
+  B-->>U: 🔊 Persona speaks opening line (TTS)
   loop Every turn
-    U->>W: Submit spoken/typed utterance
-    W->>AI: Persona context + bounded transcript
-    AI-->>W: In-character buyer response
-    W->>DB: Persist both turns
+    U->>B: 🎙️ Speaks reply (Web Speech STT)
+    B->>SF: continuePractice(sessionId, text)
+    SF->>DB: Load persona + bounded history
+    SF->>AI: System prompt + transcript
+    AI-->>SF: In-character buyer reply
+    SF->>DB: Persist both turns
+    SF-->>B: Reply + filler-word count
+    B-->>U: 🔊 Persona responds (TTS)
   end
-  U->>W: End call
-  W->>AI: Request structured 8-part evaluation
-  AI-->>W: Validated scoring object
-  W->>DB: Store report and transcript
-  W-->>U: Render debrief and next drills
+  U->>B: End & score
+  B->>SF: scorePractice(sessionId)
+  SF->>AI: Structured JSON evaluation
+  AI-->>SF: 8 scores + coaching + 3 drills
+  SF->>DB: Save validated report
+  B-->>U: 📊 Debrief (with PDF export)
 ```
 
-## Data design
+---
+
+## 🗂️ Data model
 
 ```mermaid
 erDiagram
   PROFILES ||--|| USER_STATS : has
+  PROFILES ||--o{ USER_ROLES : "is admin/user"
   PROFILES ||--o{ CALL_SESSIONS : owns
   PERSONAS ||--o{ CALL_SESSIONS : drives
   CALL_SESSIONS ||--o{ CALL_TURNS : contains
-  PROFILES ||--o{ PERSONAS : creates
+  PROFILES ||--o{ ERROR_LOGS : reports
 ```
 
-Core tables are `profiles`, `personas`, `call_sessions`, `call_turns`, and `user_stats`. Every user-owned table has row-level access policies. Built-in personas are public read-only records; custom personas are private. Leaderboard data is only public for profiles that opt in.
+| Table | Purpose | RLS posture |
+|---|---|---|
+| `profiles` | User-facing identity + onboarding answers | Owner-only |
+| `personas` | 10 built-in + custom buyer profiles | Built-ins public-read; custom owner-only |
+| `persona_secrets` | System prompts for each persona | Service-role only — never leaks |
+| `call_sessions` | One row per practice call | Owner-only |
+| `call_turns` | Every line of dialogue | Owner-only |
+| `user_stats` | Aggregates, streaks, leaderboard score | Owner-only; opt-in leaderboard read |
+| `user_roles` | Admin grants — separate table on purpose | Anti-privilege-escalation pattern |
+| `error_logs` | Client errors for the admin console | Insert by anyone; read by admins only |
 
-## Security model
+---
 
-- Server-side AI keys never enter the browser bundle.
-- Authenticated server functions validate bearer sessions and every input with Zod.
-- Database grants and row-level policies enforce ownership even if a client is modified.
-- The elevated signup trigger cannot be invoked by anonymous or signed-in clients.
-- Passwords are screened against known breach corpora.
-- Google login is handled by managed OAuth rather than app-owned secrets.
-- Transcript length and turn history are bounded before model invocation.
-- Leaderboard visibility is explicit and reversible.
+## 🛡️ Security posture
 
-Before a broad launch, add distributed abuse throttling, retention jobs, formal privacy/terms documents, data export/deletion automation, observability alerts, and a voice streaming provider. The current practice transport is text-first and deliberately preserves the architecture boundary for streaming speech-to-text and text-to-speech.
+- ✅ AI keys live **server-side only** — never ship to the browser.
+- ✅ Every user table protected by **Row-Level Security** scoped to `auth.uid()`.
+- ✅ Roles stored in a **separate `user_roles` table** with `SECURITY DEFINER` `has_role()` — no privilege escalation by editing your own profile.
+- ✅ Server functions validate every input with **Zod**.
+- ✅ Passwords screened against the **HaveIBeenPwned** breach corpus.
+- ✅ Google login via **managed OAuth** — no app-owned secrets.
+- ✅ Transcript & turn history **bounded** before model calls (cost & prompt-injection control).
+- ✅ Leaderboard visibility is **explicit and reversible**.
 
-## Runtime stack
+---
 
-- TanStack Start v1, React 19, TypeScript, Vite
-- Tailwind CSS v4 and semantic OKLCH design tokens
-- Lovable Cloud for authentication and PostgreSQL
-- Lovable AI Gateway with AI SDK structured output
-- TanStack Query, Recharts, Lucide, shadcn primitives
+## 📡 Monitoring & alerts
 
-## Local development
+Two layers:
+
+1. **Client-side telemetry** — a global `window.error` + `unhandledrejection` listener writes to `error_logs`. Speech-recognition and AI failures also flow here with structured `source` tags (`speech-recognition`, `mic-start`, `continue-practice`, `score-practice`).
+2. **Admin console** — `/admin` shows live totals (users, calls, completion rate, average score) plus an incident feed you can resolve inline. RLS guarantees only role-granted admins see it.
+
+To grant the first admin, run once in the database:
+
+```sql
+INSERT INTO public.user_roles (user_id, role)
+VALUES ('<your-auth-uid>', 'admin');
+```
+
+Then visit `/admin`.
+
+---
+
+## ⚙️ Runtime stack
+
+| Layer | Tech |
+|---|---|
+| Frontend | **React 19**, TanStack Start v1, Vite 7, TypeScript |
+| Styling | Tailwind CSS v4, OKLCH semantic tokens, Barlow Condensed display |
+| Data fetching | TanStack Query, TanStack Router |
+| Voice | Web Speech API (STT) + SpeechSynthesis (TTS) — zero vendor lock-in |
+| Backend | Lovable Cloud (Postgres + Auth), typed server functions |
+| AI | Lovable AI Gateway → **Gemini 3 Flash** with AI SDK structured output |
+| PDF | jsPDF (client-side, zero server cost) |
+| Deployment | Edge-compatible Workers runtime |
+
+---
+
+## 🚀 Local development
 
 ```bash
 bun install
 bun run dev
 ```
 
-Environment configuration is provisioned by Lovable Cloud. `LOVABLE_API_KEY` is server-only and must never use a `VITE_` prefix.
+Environment is provisioned by Lovable Cloud. The only server-side secret you'd ever rotate is `LOVABLE_API_KEY` — never prefix it with `VITE_`.
 
-## Deployment model
+---
 
-The app targets an edge-compatible server runtime. Route pages are SSR-capable; authenticated mutations and AI calls cross typed server-function boundaries. Generated route metadata is owned by TanStack Router and must not be edited manually.
+## 💰 Unit economics
 
-## Product economics
+The architecture scales cost with usage:
 
-The architecture scales cost with usage: static and SSR surfaces are inexpensive; the principal variable cost is model inference per turn and per report. Bounded history, short persona responses, structured one-shot scoring, free-tier session caps, and future rate limits protect gross margin. At scale, cache static persona prompts, summarize long transcripts incrementally, and route low-complexity turns to the least expensive acceptable model.
+- Static + SSR surfaces are nearly free per visit.
+- The principal variable cost is **AI inference per turn** and **one structured scoring call per session**.
+- Bounded history (last 30 turns), short persona replies (1–3 sentences), structured one-shot scoring, free-tier session caps, and rate limits protect gross margin.
+- At scale: cache static persona prompts, summarize long transcripts incrementally, and route low-complexity turns to a cheaper acceptable model.
 
-## MVP definition of done
+---
 
-- A new user can register, confirm identity, complete onboarding, and preserve pitch context.
-- A signed-in user can select a persona, complete a multi-turn role-play, and receive a persisted AI report.
-- Users can revisit their own reports and control leaderboard visibility.
-- Unauthenticated users cannot read private calls, turns, profiles, or coaching.
-- AI credentials remain server-side and model output is schema-validated.
+## 🗺️ Roadmap
 
-## Roadmap
+- [x] Voice-in / voice-out practice (Web Speech)
+- [x] PDF debrief export
+- [x] Admin monitoring console
+- [ ] Streaming low-latency TTS (ElevenLabs / Cartesia)
+- [ ] Usage metering + Stripe checkout for Pro/Teams
+- [ ] Custom persona generation with content safety
+- [ ] Manager workspaces, assignments, team benchmarks
+- [ ] Weekly debrief email digest
+- [ ] GDPR data export + deletion cooling-off
 
-1. Streaming microphone capture, speech-to-text, and low-latency TTS.
-2. Usage enforcement and Pro/Teams checkout.
-3. Automated aggregates, streaks, and weekly debrief emails.
-4. Custom persona generation with content safety.
-5. Manager workspaces, assignments, and team benchmarks.
-6. Native PDF exports, GDPR data export, and deletion cooling-off workflow.
+---
 
-## Operating principle
+## 🎯 Operating principle
 
-**Real calls are for execution. PitchCoach is where failure becomes training data.**
+> **Real calls are for execution. PitchCoach is where failure becomes training data.**
+
+---
+
+<div align="center">
+
+**Built with Lovable** · *Practice the hard call here. Make the real one easy.*
+
+</div>
